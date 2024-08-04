@@ -1,2 +1,0 @@
-# OTHON
-testing project
