@@ -1,0 +1,20 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+@font-face {
+  font-family: 'Satoshi-Regular';
+  src: URL('../font/Satoshi_Complete/OTF/Satoshi-Regular.otf') format('truetype');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-main);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  overflow: unset;
+  color: var(--color-dark-blue);
+  overflow-y: scroll;
+}

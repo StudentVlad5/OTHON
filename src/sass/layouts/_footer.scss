@@ -1,0 +1,244 @@
+.footer {
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+  @include mq(not-desktop) {
+    width: 375px;
+    margin: 0 auto;
+    border-top: 1px solid var(--color-white);
+
+    background-color: var(--color-dark-blue);
+    background-image: url('../images/footer/Group 116046529.svg');
+    background-repeat: no-repeat;
+    background-position: 89px 0, center;
+    background-size: cover;
+  }
+
+  @include mq(desktop) {
+    background-color: var(--color-white);
+    padding-top: 20px;
+  }
+
+  &__container {
+    position: relative;
+    padding: 0 10px 0 20px;
+
+    @include mq(desktop) {
+      width: 1880px;
+      padding: 45px;
+      border-radius: 13px;
+      background-color: var(--color-dark-blue);
+      background-image: url('../images/footer/Frame 116046637.svg');
+      background-repeat: no-repeat;
+      background-position: top right, center;
+      background-size: cover;
+    }
+  }
+
+  &__logo {
+    @include mq(desktop) {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+
+    color: var(--color-white);
+
+    @include mq(desktop) {
+      margin-bottom: 44px;
+      font-size: 20px;
+      line-height: 140%;
+    }
+  }
+
+  &__desc {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 115%;
+    text-align: left;
+
+    color: var(--color-white);
+    opacity: 50%;
+
+    @include mq(desktop) {
+      font-size: 16px;
+      line-height: 140%;
+    }
+
+    &--accent {
+      opacity: 100%;
+    }
+
+    &--upper {
+      font-size: 16px;
+    }
+  }
+
+  & .social-links {
+    position: absolute;
+    top: 2px;
+    right: 30px;
+
+    @include mq(desktop) {
+      top: auto;
+      bottom: 47px;
+      right: 45px;
+    }
+  }
+}
+
+.grid {
+  @include mq(desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 300px;
+    row-gap: 145px;
+
+    margin-top: 30px;
+  }
+}
+
+.group {
+  @include mq(desktop) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    column-gap: 100px;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-end;
+  column-gap: 50px;
+
+  margin-top: 68px;
+
+  @include mq(desktop) {
+    order: -1;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 125px;
+    margin-top: 0;
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+.address {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  column-gap: 30px;
+  row-gap: 41px;
+
+  margin-top: 86px;
+
+  @include mq(desktop) {
+    margin-top: 0;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+  }
+}
+
+.offices {
+  margin-top: 78px;
+
+  @include mq(desktop) {
+    margin-top: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+}
+
+.certifications {
+  margin-top: 40px;
+
+  @include mq(desktop) {
+    margin-top: 0;
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+
+    @include mq(desktop) {
+      gap: 56px;
+    }
+
+    & li {
+      width: 50%;
+
+      & > p {
+        margin-bottom: 13px;
+      }
+    }
+
+    & ul {
+      @include mq(desktop) {
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 103px;
+      }
+    }
+  }
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+
+  margin-top: 78px;
+
+  @include mq(desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-right: 340px;
+    margin-top: 62px;
+
+    & li {
+      &:nth-child(1) {
+        margin-left: 175px;
+        margin-right: 180px;
+      }
+
+      &:nth-child(2) {
+        order: 4;
+      }
+
+      &:nth-child(3) {
+        order: -1;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 11px;
+
+    @include mq(desktop) {
+        gap: 23px;
+    }
+
+    &__item {
+        &--bgc {
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 20px;
+        height: 20px;
+
+        color: var(--color-dark-blue);
+        border-radius: 50%;
+        background-color: var(--color-white);
+
+        transition: background-color var(--animation);
+
+        @include mq(desktop) {
+            width: 30px;
+            height: 30px;
+        }
+
+        &:hover,
+        &:focus {
+            color: var(--color-dark-blue);
+            background-color: var(--color-orange-red);
+        }
+    }
+
+    &__icon {
+        fill: currentColor;
+        stroke: currentColor;
+
+        width: 10px;
+        height: 10px;
+
+        @include mq(desktop) {
+            width: 14px;
+            height: 14px;
+        }
+    }
+}

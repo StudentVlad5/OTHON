@@ -1,0 +1,73 @@
+.swiper {
+  position: relative;
+  height: 100%;
+  max-width: 375px;
+  @include mq(desktop) {
+    display: none;
+  }
+  &-slide.services {
+    height: auto;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  &-control {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 60px;
+    height: 60px;
+    gap: 20px;
+  }
+  & .swiper-button-next,
+  .swiper-button-prev {
+    width: 14px;
+    height: 14px;
+  }
+  & .swiper-button-prev {
+    transform: rotate(180deg);
+  }
+  &-description {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 20px 80px;
+    border-radius: 12px;
+    margin-top: 18px;
+    &--text {
+      color: var(--color-white);
+      font-size: var(--font-size-xxs);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+  }
+
+  &-link {
+    position: absolute;
+    right: 16px;
+    bottom: 18px;
+  }
+
+  &-title {
+    position: relative;
+
+    // border-bottom: 1px solid gray;
+  }
+  &-subtitle {
+    max-width: 265px;
+    padding-bottom: 18px;
+    color: var(--color-dark-blue);
+    font-size: var(--font-size-xl);
+    font-style: normal;
+    text-align: left;
+    font-weight: 400;
+    line-height: 31px;
+    border-bottom: 1px solid var(--color-orange-red);
+  }
+}

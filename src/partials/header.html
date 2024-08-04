@@ -1,0 +1,68 @@
+<header id="header" class="header">
+  <div class="header__container container">
+    <a
+      class="header__logo logo"
+      href="./index.html"
+      aria-label="Logo of the company"
+    >
+      <img
+        class="logo logo--dark is-open"
+        src="images/header/mg-logo_dark.svg"
+        alt="Logo"
+      />
+      <img
+        class="logo logo--bright"
+        src="images/header/mg-logo_bright.svg"
+        alt="Logo"
+      />
+    </a>
+    <nav class="header__navigation navigation">
+      <ul class="navigation__list"></ul>
+    </nav>
+
+    <button
+      class="header__form-button btn"
+      type="button"
+      aria-label="go to the contact form"
+    >
+      Contact Us
+    </button>
+
+    <div class="animation__container"></div>
+    <button
+      class="mobile-btn"
+      type="button"
+      aria-label="Switch mobile menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="mobile-btn__icon">
+        <img
+          class="mobile-btn__icon-open"
+          src="images/header/mobile_menu.svg"
+          alt="open mobile menu"
+        />
+
+        <img
+          class="mobile-btn__icon-close"
+          src="./images/header/close_icon.svg"
+          alt="close mobile menu"
+        />
+      </span>
+    </button>
+  </div>
+
+  <!-- ========= MOBILE MENU ===========-->
+  <div class="header__mobile-menu mobile-menu" id="mobile-menu">
+    <nav class="mobile-menu__navigation navigation">
+      <ul class="navigation__list mobile-menu__navigation__list"></ul>
+      <button
+        class="mobile-menu_form-button btn"
+        type="button"
+        aria-label="go to the contact form"
+      >
+        Contact Us
+      </button>
+    </nav>
+  </div>
+</header>

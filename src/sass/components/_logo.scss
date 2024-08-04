@@ -1,0 +1,14 @@
+.logo {
+    display: inline-block;
+    z-index: 13;
+
+    &>img {
+        width: 137px;
+        height: 24.23px;
+
+        @include mq(desktop) {
+            width: 200px;
+            height: 35.37px;
+        }
+    }
+}

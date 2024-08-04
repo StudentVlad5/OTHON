@@ -1,0 +1,32 @@
+// utils
+@import './utils/breakpoints';
+@import './utils/variables';
+@import './utils/mixins';
+
+// base styles
+@import './base/reset';
+@import './base/common';
+@import './base/section';
+@import './base/container';
+@import './base/animations';
+
+// components
+@import './components/visually-hidden';
+@import './components/logo';
+@import './components/button';
+@import './components/button_link';
+@import './components/social-links';
+@import './components/slider';
+@import './components/video';
+@import './components/mobile-menu';
+@import './components/form';
+@import './components/modal';
+
+// layuots
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/services';
+@import './layouts/careers';
+@import './layouts/home';
+@import './layouts/about';
+@import './layouts/footer';

@@ -1,0 +1,162 @@
+// mobile menu
+.header__mobile-menu.mobile-menu.is-open {
+  overflow: hidden;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 12;
+
+  width: 100vw;
+  height: 100vh;
+
+  padding: 140px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  transform: translateX(100%);
+  transition: transform var(--animation);
+
+  background: url('../images/header/mobile_background.svg');
+
+  background-position: center;
+  overflow-y: scroll;
+
+  @include mq(tablet) {
+    padding: 140px 40px;
+  }
+
+  @include mq(desktop) {
+    display: none;
+  }
+
+  &_form-button {
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    justify-content: center;
+    margin-top: 249px;
+    padding: 18px 123px;
+    max-width: 335px;
+    align-items: center;
+    border: 1px solid var(--color-white);
+    border-radius: 100px;
+    cursor: pointer;
+  }
+
+  &.is-open {
+    visibility: visible;
+    transform: translateX(0);
+    transition: transform var(--animation);
+    transition-delay: 1s;
+  }
+
+  &__navigation {
+    margin-top: 9px;
+
+    &__list {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      box-sizing: border-box;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 12px;
+    }
+
+    &__link {
+      color: var(--color-white);
+      font-size: var(--font-size-s);
+      font-style: normal;
+      text-align: left;
+      font-family: var(--font-family-main);
+      font-weight: 400;
+      line-height: 28px;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.mobile-btn {
+  z-index: 11;
+
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+  width: 28px;
+  height: 28px;
+
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: var(--color-white);
+  }
+
+  &.is-open {
+    z-index: 13;
+  }
+
+  @include mq(desktop) {
+    display: none;
+  }
+
+  &__icon {
+    position: relative;
+    border-radius: 100px;
+    background-color: var(--color-dark-blue);
+
+    &-open {
+      display: block;
+
+      .mobile-btn.is-open & {
+        display: none;
+      }
+    }
+  }
+
+  &__icon-close {
+    display: none;
+
+    .mobile-btn.is-open & {
+      z-index: 14;
+      display: block;
+    }
+  }
+}
+
+.animation__container {
+  position: absolute;
+  top: 35px;
+  right: 36px;
+  width: 5px;
+  height: 5px;
+  border-radius: 100px;
+  background-color: var(--color-dark-blue);
+  animation-name: button_annimate_return;
+  animation-duration: 1.2s;
+  animation-iteration-count: 1;
+  z-index: 1;
+
+  &.animate {
+    animation-name: button_annimate;
+    animation-duration: 1.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @include mq(desktop) {
+    display: none;
+  }
+}

@@ -1,0 +1,27 @@
+:root {
+  // colors
+  --color-orange-red: #f2683c;
+  --color-black: #1d1d1d;
+  --color-white: #ffffff;
+  --color-dark-blue: #18306c;
+  --color-alice-blue: #eaf0ff;
+
+  // fonts
+  --font-family-main: 'Satoshi-Regular', sans-serif;
+  --font-family-title: 'Inter', sans-serif;
+  --font-size-xxxs: 14px;
+  --font-size-xxs: 16px;
+  --font-size-xs: 18px;
+  --font-size-s: 20px;
+  --font-size-m: 22px;
+  --font-size-l: 24px;
+  --font-size-xl: 26px;
+  --font-size-xxl: 34px;
+  --font-size-xxxl: 45px;
+  --font-size-xxxxl: 60px;
+
+  // transition
+  --animation: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --animation_services: 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  --img_animation: 3000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
